@@ -1,0 +1,276 @@
+/* Modern UI style for WampServer */
+
+@font-face {
+	font-family: "Plus Jakarta Sans", sans-serif;
+	src: url('fonts/PlusJakartaSans-Medium.ttf') format('truetype'),
+		 url('fonts/PlusJakartaSans-SemiBold.ttf') format('truetype'),
+		 url('fonts/PlusJakartaSans-Bold.ttf') format('truetype')
+  }
+  
+
+
+* {margin: 0;padding: 0;
+	font-family: "Plus Jakarta Sans", sans-serif;
+box-sizing: border-box;
+
+}
+
+html {
+	
+	background: #f4f4f4;
+}
+
+body {
+	margin: 48px;
+	font: 80%/1.4 tahoma, arial, helvetica, lucida sans, sans-serif;
+	position: relative;
+}
+
+abbr {
+	font-weight: 700;
+	font-variant: none;
+	border:none;
+	text-decoration:none;
+}
+
+.innerhead {
+	display: flex;
+	justify-content: space-between;
+align-items: center;
+	margin-bottom: 16px;
+	margin-top: 16px;
+	border-radius: 16px;
+	padding: 32px;
+	background-color: #ffffff;
+}
+
+.align-logo {
+	display: flex;
+	align-items: center;
+	width: 50%;
+	gap: 16px;
+}
+
+.resize-img {
+	width: 100%;
+	max-width: 111.5px;
+	height: 100%;
+	max-height: 72px;
+}
+
+
+
+.innerhead h1, ul:nth-last-child(2) {
+	margin-bottom: 8px;
+}
+
+.innerconfig {
+	background-color: #ffffff;
+	padding: 32px;
+border-radius: 16px;
+margin-bottom: 16px;
+	
+}
+
+#themes, #langues {
+	background-color: #f8f8f8;
+	padding: 16px;
+	border: 2px solid transparent;
+	border-radius: 16px;
+}
+
+#themes:hover {
+	border: 2px solid #000;
+
+}
+
+.utility {
+	font-size: 0.85em;
+}
+
+.utility li {
+	display: inline;
+	padding:0;
+	margin:0;
+}
+.inneralltools {
+	border-radius: 16px;
+	overflow: hidden;
+	display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 16px;
+}
+h2 {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#head ul li, dl ul li, #foot li {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0 0.4em;
+}
+
+ul.aliases, ul.projects, ul.tools, ul.vhost {
+	list-style: none;
+	line-height: 23px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin: 16px;
+}
+
+ul.projects {
+	max-width:230px;
+}
+
+ul.aliases a, ul.projects a, ul.tools a ,ul.vhost a {
+	padding-left: 22px;
+	background: url('img/pngFolder.png') 0 100% no-repeat;
+}
+
+ul.tools a {
+	background: url('img/pngWrench.png') 0 100% no-repeat;
+}
+
+ul.aliases a, ul.vhost a {
+	background: url('img/pngFolderGo.png') 0 100% no-repeat;
+}
+
+li.projectsdir, li.phpmynot {
+	line-height:95%;
+	font-size: 0.72em;
+	color: #04569A;
+	margin-top:10px;
+	padding-right:15px;
+}
+
+li.phpmynot {
+	margin:0;
+	padding:0 0 0 22px;
+	white-space:nowrap;
+	color:red;
+}
+
+dl {
+	margin: 0;
+	padding: 0;
+}
+
+dt {
+	font-weight: bold;
+	text-align: right;
+	width: 15em;
+	clear: both;
+}
+
+.config-margin {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+dd {
+	margin-bottom: 16px;
+	overflow: auto;
+}
+dd ul li {
+	float: left;
+	display: block;
+	width: 16.5%;
+  min-width: 140px;
+	margin: 0;
+	padding: 0 0 0 20px;
+	background: url('img/pngPlugin.png') 2px 50% no-repeat;
+	line-height: 1.35;
+}
+
+dd.ddphpext {
+	margin-left:1.5em;
+}
+
+ul.phpext {
+	margin-top:1.5em;
+}
+
+ul.phpext li {
+	width: 6%;
+  min-width: 100px;
+}
+
+a {
+	color: #024378;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #04569A;
+	text-decoration: underline;
+}
+
+
+#foot {
+	text-align: center;
+	padding-top: 1em;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+#error {
+	text-align: center;
+	margin-top: 1.8em;
+	border-top: 1px solid #999;
+	padding-top: 1em;
+	font-size: 0.85em;
+}
+
+
+.column {
+	border-radius: 16px;
+width: 100%;
+    float:left;
+	padding: 32px;
+background-color: #ffffff;
+height: 250px;
+}
+
+.three-columns .column {
+    min-width: 33.33%;
+}
+.four-columns .column {
+    min-width: 25%;
+}
+
+pre {
+ white-space:pre-wrap;
+ overflow-x:auto;
+ font-size:1.4em;
+ border: 1px solid #999;
+ padding:1em;
+}
+
+@media screen and (max-width: 750px) {
+    dt {
+    	text-align: left;
+    	width: 100%;
+    	clear: left;
+        margin: 2% 0 0 0;
+    }
+
+    dd {
+    	margin: 0;
+    	padding: 0.5% 1.5% 1% 1.5%;
+    }
+}
